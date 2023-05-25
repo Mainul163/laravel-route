@@ -24,6 +24,10 @@ Route::get('/content', function () {
     return view('content');
 });
 
+Route::get('/country',function(){
+
+    return view('country');
+})->middleware('country');
 
 // *********view  route ************
  

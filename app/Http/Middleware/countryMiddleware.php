@@ -16,11 +16,12 @@ class countryMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        // $array=["bangladesh",
         
-        //         "india" ,
-        //         "pakistan",
-        //         "africa" ];
-        return $next($request);
+        $array=["india","bangladesh","nepal","canada"];
+        if(in_array($request->country,$array)){
+            return $next($request);
+        } 
+
+        return redirect()->to('/');
     }
 }
