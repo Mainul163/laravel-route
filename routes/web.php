@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/about', function () {
-    return view ('about');
-});
+// Route::get('/about', function () {
+//     return view ('about');
+// });
 
 Route::get('/content', function () {
     return view('content');
@@ -33,6 +33,16 @@ Route::get('/country',function(){
  
 // Route::view('/about','about');
 
+
+
+
+
+// *********name  route ************
+
+Route::get('/about',function(){
+    return view ('about');
+
+})->name('about');
 
 
 
